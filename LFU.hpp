@@ -71,6 +71,7 @@ public:
 
 
 private:
+
     struct Node {
         Value value;
         size_t freq;
