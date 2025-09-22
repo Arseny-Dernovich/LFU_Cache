@@ -53,7 +53,8 @@ TestResult RunTest (const std::string& filename)
 int main ()
 {
     std::vector<std::string> files = {"test1.dat" , "test2.dat" , "test3.dat" , "test4.dat" ,
-                                      "test5.dat" , "test6.dat" , "test7.dat"};
+                                      "test5.dat" , "test6.dat" , "test7.dat" , "test8.dat" , 
+                                      "test9.dat" , "test10.dat"};
  
     for (const auto& f : files) {
 
