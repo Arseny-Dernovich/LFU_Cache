@@ -59,7 +59,7 @@ int main ()
 
         auto result = RunTest (f);
         if (result.lfuHits >= 0) {
-            
+                    
             std::cout << "Файл: " << result.filename
                       << " | Capacity=" << result.capacity
                       << " | Requests=" << result.requests
