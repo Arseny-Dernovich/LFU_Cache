@@ -8,10 +8,12 @@
 
 
 size_t VALUE_WILL_UNUSED= std::numeric_limits<size_t>::max (); // значение ключа по умолчанию или если он в будущем не встретится
+
 template <typename Key>
 class OptimalCache {
-
+    
 public:
+
     OptimalCache (size_t capacity , const std::vector<Key>& sequence)
         : capacity_ (capacity) , sequence_ (sequence) {}
 
@@ -48,6 +50,7 @@ public:
     }
 
 private:
+
     size_t capacity_ = 0;
     const std::vector<Key>& sequence_ = {};
 

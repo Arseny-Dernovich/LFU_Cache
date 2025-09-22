@@ -28,19 +28,22 @@ TestResult RunTest (const std::string& filename)
     std::vector<int> seq (n);
     for (int i = 0; i < n; i++) fin >> seq[i];
 
-    // LFU
+    
     LFUCache<int,int> cache (capacity);
     int lfuHits = 0;
     for (int key : seq) {
+
         auto v = cache.get (key);
         if (v) {
             lfuHits++;
-        } else {
+        } 
+        
+        else {
             cache.put (key , key);
         }
     }
 
-    // OPT
+    
     OptimalCache<int> opt (capacity , seq);
     int optHits = opt.run ();
 
@@ -53,8 +56,10 @@ int main ()
                                       "test5.dat" , "test6.dat" , "test7.dat"};
  
     for (const auto& f : files) {
+
         auto result = RunTest (f);
         if (result.lfuHits >= 0) {
+            
             std::cout << "Файл: " << result.filename
                       << " | Capacity=" << result.capacity
                       << " | Requests=" << result.requests
