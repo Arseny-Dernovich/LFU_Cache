@@ -1,7 +1,7 @@
-CXX = g++
+	CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -O2
 
-TARGET = tests
+TARGET = run_tests
 SRC = tests.cpp
 
 all: $(TARGET)
