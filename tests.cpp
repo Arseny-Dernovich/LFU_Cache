@@ -3,6 +3,10 @@
 #include "LFU.hpp"
 #include "perfect_cache.hpp"
 
+bool Read_Input (int& capacity , int& n , std::vector<int>& seq);
+int Run_OPT (int capacity , const std::vector<int>& seq);
+int Run_LFU (int capacity , const std::vector<int>& seq);
+
 
 int main ()
 {
